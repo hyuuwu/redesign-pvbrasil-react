@@ -53,7 +53,7 @@ export default function Location() {
               </li>
               <li className="flex justify-between items-center border-b border-outline-variant/30 pb-2">
                 <span className="font-body-md text-body-md text-on-surface-variant">Sábado</span>
-                <span className="font-body-md text-body-md text-on-surface font-medium">10:00 - 15:00</span>
+                <span className="font-body-md text-body-md text-on-surface font-medium">08:00 - 15:00</span>
               </li>
               <li className="flex justify-between items-center">
                 <span className="font-body-md text-body-md text-on-surface-variant">Domingo</span>
