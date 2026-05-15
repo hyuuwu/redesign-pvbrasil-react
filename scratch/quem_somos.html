@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quem Somos - PV Brasil</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#323537",
+                        "secondary": "#afecff",
+                        "on-tertiary-container": "#008fa1",
+                        "tertiary-fixed-dim": "#44d8f1",
+                        "inverse-surface": "#e0e3e5",
+                        "secondary-container": "#14d8ff",
+                        "on-tertiary": "#00363e",
+                        "slate-gray": "#525656",
+                        "on-secondary-fixed": "#001f27",
+                        "on-tertiary-fixed": "#001f25",
+                        "on-primary-container": "#74829d",
+                        "surface-variant": "#323537",
+                        "inverse-on-surface": "#2d3133",
+                        "electric-cyan": "#00D8FF",
+                        "surface-container": "#1d2022",
+                        "on-primary-fixed-variant": "#39475f",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "secondary-fixed-dim": "#14d8ff",
+                        "on-background": "#e0e3e5",
+                        "on-primary-fixed": "#0d1c32",
+                        "on-tertiary-fixed-variant": "#004e59",
+                        "tertiary-container": "#001c21",
+                        "surface": "#101415",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "surface-tint": "#b9c7e4",
+                        "surface-container-high": "#272a2c",
+                        "surface-bright": "#363a3b",
+                        "on-surface-variant": "#c5c6cd",
+                        "primary": "#b9c7e4",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary": "#003641",
+                        "tertiary": "#44d8f1",
+                        "surface-dim": "#101415",
+                        "outline": "#8f9097",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#a1efff",
+                        "muted-teal": "#00BCD4",
+                        "on-primary": "#233148",
+                        "surface-container-low": "#191c1e",
+                        "on-secondary-container": "#005b6c",
+                        "inverse-primary": "#515f78",
+                        "secondary-fixed": "#afecff",
+                        "background": "#101415",
+                        "primary-container": "#0a192f",
+                        "deep-navy": "#0A192F",
+                        "error": "#ffb4ab",
+                        "surface-dark": "#112240",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#0b0f10",
+                        "outline-variant": "#44474d",
+                        "on-error": "#690005",
+                        "on-surface": "#e0e3e5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base-unit": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "button": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-deep-navy text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface/80 backdrop-blur-md border-t border-electric-cyan/20 shadow-[0px_4px_20px_rgba(0,216,255,0.1)]">
+<div class="flex items-center gap-8">
+<img alt="PV Brasil Logo" class="h-10 w-auto cursor-pointer scale-95 active:scale-90 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzJiYJsLP4_PYG7bi0ZUMNicT-4f5aCpbN1y3Z1sC7fRGDKGtyrXUK780szGZrvxHTwhLF-YGn3PLquZrLeUo16vThTQ4jxtreSMkCPP_XX5cQhwm0rXI8TGQbZJpeQ0z2-fBr8woVkaYUMnOUAkmwayGSGXyzm94OKPuNVpb9G0I7ySaiirUDHQ8lBsKpzMi78gDQP3AzfAnt3r_wz8wXP-Dn6Ze35JaydV9dosEndWtt2y3WEG8YlUhYOLKgjofHlwI5NO_Qx6bG"/>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-button text-button text-on-surface-variant hover:text-electric-cyan transition-colors hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-DEFAULT" href="#">Início</a>
+<a class="font-button text-button text-on-surface-variant hover:text-electric-cyan transition-colors hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-DEFAULT" href="#">Produtos</a>
+<a class="font-button text-button text-electric-cyan border-b-2 border-electric-cyan pb-1 px-3 py-2 hover:bg-white/5 transition-all duration-300" href="#">Quem Somos</a>
+<a class="font-button text-button text-on-surface-variant hover:text-electric-cyan transition-colors hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-DEFAULT" href="#">Localização</a>
+<a class="font-button text-button text-on-surface-variant hover:text-electric-cyan transition-colors hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-DEFAULT" href="#">Contato</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-electric-cyan hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 flex items-center justify-center">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="text-electric-cyan hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 flex items-center justify-center">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Hero Section -->
+<section class="mb-24 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 flex flex-col gap-6 z-10">
+<span class="font-label-sm text-label-sm text-electric-cyan uppercase tracking-wider bg-electric-cyan/10 px-3 py-1 rounded-full w-fit">Nossa História</span>
+<h1 class="font-headline-xl text-headline-xl text-white leading-tight">
+                    Distribuição e Atacado de <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric-cyan to-muted-teal">Excelência</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Fundada em Feira de Santana, Bahia, no ano de 2022, a PV Brasil destaca-se como distribuidora e atacadista de tecnologia. Somos especialistas em importação de eletrônicos e atuamos como distribuidores autorizados das principais marcas mundiais.
+                </p>
+</div>
+<div class="md:col-span-7 relative">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-[#233554] shadow-[0px_4px_30px_rgba(0,0,0,0.5)] group">
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-dark/80 via-transparent to-transparent z-10 mix-blend-multiply"></div>
+<img alt="High-tech warehouse operations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A highly professional, immaculate tech distribution warehouse bathed in a sophisticated Deep Navy and Electric Cyan color palette. Rows of sleek, modern server racks and meticulously organized high-end electronics boxes are visible. Soft, cool blue lighting highlights the precision and scale of the operation, evoking a sense of advanced technology, reliability, and clean corporate modernism. The mood is precise, authoritative, and futuristic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXwHdEhWRhvzhF6PCr-94EdABBPbO_G_g_TqT-xs1pqo0iBTaLojteONj6x-dHgiTAptsqBHHdOwCJ_mjSkObDccxl0W1mVPPdcswRbco7Yh84lU3AaaDfh8yxsolkdcMqdQlHBty73q2pJXVaxjHceBDol4wqzUNOrWoKPlO4rAnKkyNXUYxQIka63PVF_vNyOmepLYcVvYzLnaVZSDQ05EXEOZjW9gZ2PTqWQ444eQInidyNSrWRljqIHcm_jMqrw4orS9lYJLQg"/>
+</div>
+<!-- Glass accent -->
+<div class="absolute -bottom-6 -left-6 w-48 h-48 bg-electric-cyan/20 blur-[60px] rounded-full z-0"></div>
+</div>
+</section>
+<!-- Mission Bento Grid -->
+<section class="mb-24">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Main Bento Box -->
+<div class="md:col-span-2 bg-surface-dark border border-[#233554] rounded-xl p-8 flex flex-col justify-between relative overflow-hidden group hover:border-electric-cyan/30 transition-colors duration-300">
+<div class="absolute top-0 right-0 w-64 h-64 bg-electric-cyan/5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+<div class="z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-electric-cyan text-3xl">public</span>
+<h2 class="font-headline-md text-headline-md text-white">Nossa Missão</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                            Democratizar o acesso à tecnologia de elite no Brasil através de uma cadeia de suprimentos otimizada, transparente e rigorosamente controlada. Garantimos que cada componente importado chegue ao destino final com sua integridade e performance originais preservadas.
+                        </p>
+</div>
+</div>
+<!-- Small Bento Box 1 -->
+<div class="bg-surface-dark border border-[#233554] rounded-xl p-8 flex flex-col gap-4 group hover:border-electric-cyan/30 hover:shadow-[0px_4px_20px_rgba(0,216,255,0.1)] transition-all duration-300">
+<span class="material-symbols-outlined text-electric-cyan text-3xl">verified</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-white">Autenticidade</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Certificação de origem para 100% do nosso portfólio. Tolerância zero para falsificações.
+                    </p>
+</div>
+<!-- Small Bento Box 2 -->
+<div class="bg-surface-dark border border-[#233554] rounded-xl p-8 flex flex-col gap-4 group hover:border-electric-cyan/30 hover:shadow-[0px_4px_20px_rgba(0,216,255,0.1)] transition-all duration-300 md:col-start-3 md:row-start-1">
+<span class="material-symbols-outlined text-electric-cyan text-3xl">speed</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-white">Agilidade</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Logística internacional avançada para reduzir prazos e otimizar custos de importação.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section>
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Pilares da Nossa Operação</h2>
+<div class="w-16 h-1 bg-electric-cyan mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Value 1 -->
+<div class="bg-surface/50 backdrop-blur-md border border-outline-variant hover:border-electric-cyan/50 hover:shadow-[0px_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 rounded-xl p-6 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-deep-navy border border-electric-cyan/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-electric-cyan">precision_manufacturing</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-lg">Qualidade Exata</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        Curadoria técnica de marcas globais renomadas.
+                    </p>
+</div>
+<!-- Value 2 -->
+<div class="bg-surface/50 backdrop-blur-md border border-outline-variant hover:border-electric-cyan/50 hover:shadow-[0px_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 rounded-xl p-6 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-deep-navy border border-electric-cyan/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-electric-cyan">shield_locked</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-lg">Segurança</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        Processos aduaneiros 100% transparentes e em conformidade.
+                    </p>
+</div>
+<!-- Value 3 -->
+<div class="bg-surface/50 backdrop-blur-md border border-outline-variant hover:border-electric-cyan/50 hover:shadow-[0px_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 rounded-xl p-6 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-deep-navy border border-electric-cyan/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-electric-cyan">support_agent</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-lg">Suporte Especializado</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        Atendimento B2B focado em resolver gargalos técnicos.
+                    </p>
+</div>
+<!-- Value 4 -->
+<div class="bg-surface/50 backdrop-blur-md border border-outline-variant hover:border-electric-cyan/50 hover:shadow-[0px_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 rounded-xl p-6 flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-deep-navy border border-electric-cyan/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-electric-cyan">hub</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-lg">Rede Global</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        Parcerias diretas com fabricantes na Ásia e América do Norte.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col gap-4">
+<img alt="PV Brasil Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzJiYJsLP4_PYG7bi0ZUMNicT-4f5aCpbN1y3Z1sC7fRGDKGtyrXUK780szGZrvxHTwhLF-YGn3PLquZrLeUo16vThTQ4jxtreSMkCPP_XX5cQhwm0rXI8TGQbZJpeQ0z2-fBr8woVkaYUMnOUAkmwayGSGXyzm94OKPuNVpb9G0I7ySaiirUDHQ8lBsKpzMi78gDQP3AzfAnt3r_wz8wXP-Dn6Ze35JaydV9dosEndWtt2y3WEG8YlUhYOLKgjofHlwI5NO_Qx6bG"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 PV Brasil. Importadora de Eletrônicos High-End. Todos os direitos reservados.
+            </span>
+</div>
+<div class="flex flex-wrap gap-6 md:gap-8">
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-electric-cyan transition-colors opacity-80 hover:opacity-100" href="#">Política de Privacidade</a>
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-electric-cyan transition-colors opacity-80 hover:opacity-100" href="#">Termos de Serviço</a>
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-electric-cyan transition-colors opacity-80 hover:opacity-100" href="#">Informações de Envio</a>
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-electric-cyan transition-colors opacity-80 hover:opacity-100" href="#">Devoluções</a>
+</div>
+</footer>
+</body></html>

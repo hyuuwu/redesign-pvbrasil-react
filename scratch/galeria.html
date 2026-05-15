@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Circuit Precision - Product Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-container": "#005b6c",
+                        "tertiary-container": "#001c21",
+                        "muted-teal": "#00BCD4",
+                        "primary-container": "#0a192f",
+                        "on-primary-container": "#74829d",
+                        "surface-dark": "#112240",
+                        "surface-container-lowest": "#0b0f10",
+                        "on-primary": "#233148",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "secondary-container": "#14d8ff",
+                        "on-secondary-fixed-variant": "#004e5d",
+                        "background": "#101415",
+                        "tertiary": "#44d8f1",
+                        "on-primary-fixed-variant": "#39475f",
+                        "deep-navy": "#0A192F",
+                        "surface-tint": "#b9c7e4",
+                        "secondary-fixed": "#afecff",
+                        "primary-fixed": "#d6e3ff",
+                        "on-tertiary-fixed": "#001f25",
+                        "error-container": "#93000a",
+                        "outline-variant": "#44474d",
+                        "inverse-primary": "#515f78",
+                        "surface-variant": "#323537",
+                        "inverse-on-surface": "#2d3133",
+                        "surface-bright": "#363a3b",
+                        "slate-gray": "#525656",
+                        "tertiary-fixed": "#a1efff",
+                        "on-tertiary": "#00363e",
+                        "on-error": "#690005",
+                        "outline": "#8f9097",
+                        "on-surface-variant": "#c5c6cd",
+                        "on-secondary-fixed": "#001f27",
+                        "on-tertiary-container": "#008fa1",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#003641",
+                        "on-primary-fixed": "#0d1c32",
+                        "surface-container-low": "#191c1e",
+                        "on-tertiary-fixed-variant": "#004e59",
+                        "on-surface": "#e0e3e5",
+                        "surface-container-highest": "#323537",
+                        "surface-dim": "#101415",
+                        "secondary-fixed-dim": "#14d8ff",
+                        "secondary": "#afecff",
+                        "inverse-surface": "#e0e3e5",
+                        "surface-container-high": "#272a2c",
+                        "on-background": "#e0e3e5",
+                        "primary": "#b9c7e4",
+                        "tertiary-fixed-dim": "#44d8f1",
+                        "surface-container": "#1d2022",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#101415",
+                        "electric-cyan": "#00D8FF"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "base-unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "button": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Montserrat"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "button": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+                        "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-xl": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit to match the dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A192F; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #323537; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #525656; 
+        }
+    </style>
+</head>
+<body class="bg-deep-navy text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 w-full backdrop-blur-md bg-deep-navy/90 border-b border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-cyan text-3xl" style="font-variation-settings: 'FILL' 1;">memory</span>
+<h1 class="font-headline-md tracking-tight text-white">Circuit<span class="text-electric-cyan">Precision</span></h1>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-label-sm uppercase tracking-widest text-slate-gray">
+<a class="hover:text-electric-cyan transition-colors" href="#">Components</a>
+<a class="hover:text-electric-cyan transition-colors" href="#">Peripherals</a>
+<a class="hover:text-electric-cyan transition-colors" href="#">Networking</a>
+<a class="text-electric-cyan font-bold border-b-2 border-electric-cyan pb-1" href="#">Catalog</a>
+</nav>
+<div class="flex items-center gap-4 text-slate-gray">
+<button class="hover:text-electric-cyan transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hover:text-electric-cyan transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 flex h-3 w-3 items-center justify-center rounded-full bg-electric-cyan text-[8px] font-bold text-deep-navy">3</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max w-full mx-auto px-margin-mobile lg:px-margin-desktop py-12 flex flex-col lg:flex-row gap-gutter">
+<!-- Sidebar / Filters -->
+<aside class="w-full lg:w-64 flex-shrink-0 flex flex-col gap-8">
+<div class="bg-surface-dark border border-surface-variant rounded-lg p-6">
+<div class="flex items-center gap-2 mb-6 border-b border-surface-variant pb-4">
+<span class="material-symbols-outlined text-muted-teal">tune</span>
+<h2 class="font-headline-md text-[20px] text-white">Filters</h2>
+</div>
+<!-- Category Filter -->
+<div class="mb-8">
+<h3 class="font-label-sm text-slate-gray uppercase tracking-widest mb-4">Categories</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox rounded bg-deep-navy border-surface-variant text-electric-cyan focus:ring-electric-cyan focus:ring-offset-surface-dark focus:ring-offset-2" type="checkbox"/>
+<span class="font-body-md text-on-surface group-hover:text-electric-cyan transition-colors">Processors</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input checked="" class="form-checkbox rounded bg-deep-navy border-surface-variant text-electric-cyan focus:ring-electric-cyan focus:ring-offset-surface-dark focus:ring-offset-2" type="checkbox"/>
+<span class="font-body-md text-white font-medium">Graphics Cards</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox rounded bg-deep-navy border-surface-variant text-electric-cyan focus:ring-electric-cyan focus:ring-offset-surface-dark focus:ring-offset-2" type="checkbox"/>
+<span class="font-body-md text-on-surface group-hover:text-electric-cyan transition-colors">Motherboards</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox rounded bg-deep-navy border-surface-variant text-electric-cyan focus:ring-electric-cyan focus:ring-offset-surface-dark focus:ring-offset-2" type="checkbox"/>
+<span class="font-body-md text-on-surface group-hover:text-electric-cyan transition-colors">Memory</span>
+</label>
+</div>
+</div>
+<!-- Brand Filter -->
+<div>
+<h3 class="font-label-sm text-slate-gray uppercase tracking-widest mb-4">Brands</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox rounded bg-deep-navy border-surface-variant text-electric-cyan focus:ring-electric-cyan focus:ring-offset-surface-dark focus:ring-offset-2" type="checkbox"/>
+<span class="font-body-md text-on-surface group-hover:text-electric-cyan transition-colors">NVIDIA</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox rounded bg-deep-navy border-surface-variant text-electric-cyan focus:ring-electric-cyan focus:ring-offset-surface-dark focus:ring-offset-2" type="checkbox"/>
+<span class="font-body-md text-on-surface group-hover:text-electric-cyan transition-colors">AMD</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="form-checkbox rounded bg-deep-navy border-surface-variant text-electric-cyan focus:ring-electric-cyan focus:ring-offset-surface-dark focus:ring-offset-2" type="checkbox"/>
+<span class="font-body-md text-on-surface group-hover:text-electric-cyan transition-colors">ASUS</span>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-grow">
+<!-- Active Filters Bar -->
+<div class="flex items-center justify-between mb-6">
+<p class="font-body-md text-slate-gray">Showing <span class="text-white font-medium">6</span> results</p>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-slate-gray uppercase">Sort by:</span>
+<select class="bg-surface-dark border border-surface-variant text-white font-body-md rounded focus:ring-electric-cyan focus:border-electric-cyan py-1 pl-3 pr-8">
+<option>Newest Arrivals</option>
+<option>Name (A-Z)</option>
+</select>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<article class="group flex flex-col items-center bg-surface-dark rounded-lg p-6 border border-surface-variant hover:border-electric-cyan/50 hover:shadow-[0_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 cursor-pointer">
+<div class="w-full aspect-square bg-surface-container-lowest rounded mb-6 overflow-hidden relative flex items-center justify-center p-4">
+<img alt="GPU" class="w-full h-full object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" data-alt="A high-resolution, studio-quality photograph of a sleek, modern graphics card suspended against a deep navy background. The metallic shroud is illuminated by sharp, cool white lighting, highlighting its engineered precision. Subtle electric cyan underglow emanates from the cooling fans, creating a high-tech, premium aesthetic. The composition is dead-center, emphasizing symmetrical design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQlcTQdOVwlruDIy_fh3fBvQKkCeV0hPD0RKKt_T2nMyJd3yRWL5nZkZhl_Y1cH93A5q8TwbnWwVld2YJiVfpYNYTxq9WAslCKl6T-Pwjzx_V7AybgnZ4O5j5QFm36xyuQ-FSs6sm601OaCFR1L5VUNehtaSivuc2GvOdv8UwAswFbsuoOIZGoE_wbiONDnLF7nVL9XccPbxrWiv7gMRJjlzPJFM399tyl-6tglU3wbte3xCXRn3MRqmoMyU2RND8x8GrFBsJFw7U6"/>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-muted-teal uppercase tracking-widest mb-2">Graphics Card</span>
+<h3 class="font-headline-md text-[20px] text-white leading-tight">GeForce RTX 4090 Founders Edition</h3>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="group flex flex-col items-center bg-surface-dark rounded-lg p-6 border border-surface-variant hover:border-electric-cyan/50 hover:shadow-[0_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 cursor-pointer">
+<div class="w-full aspect-square bg-surface-container-lowest rounded mb-6 overflow-hidden relative flex items-center justify-center p-4">
+<img alt="CPU" class="w-full h-full object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" data-alt="A macro photography shot of an advanced computer processor chip on a pristine, dark slate surface. The intricate gold pins and silicon die catch fragments of electric cyan lighting from an unseen source, emphasizing its micro-engineered details. The surrounding environment is a deep, immersive navy, giving the chip a monumental, monolithic presence. The lighting is dramatic and focused entirely on the center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRatj-rgBXCGQgjPeD2scYnh59J78rvV1v3jyccLZqgVorguO45cKmgXZ_8jVoUGiXxFz3aVbeGsYBZ5hJr-fd6UOpIrrEtEOOGhEZTRnOVynSu7js413qpWVDGFNSEaNX7oIgKtzDCqFUjg5MZbZUqEexGz2mcR5bAiyY_l1vRciQ5YRSmkrfvlB4ntjsX6_b8qjW_9nfK8RfsNq8Oy_mvtP_ax5QVQRB_oYU7HiCMhr2apgcKKz-xSatNjvS2_bVATzDZqbMyfKk"/>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-muted-teal uppercase tracking-widest mb-2">Processor</span>
+<h3 class="font-headline-md text-[20px] text-white leading-tight">Ryzen 9 7950X3D Desktop Processor</h3>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="group flex flex-col items-center bg-surface-dark rounded-lg p-6 border border-surface-variant hover:border-electric-cyan/50 hover:shadow-[0_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 cursor-pointer">
+<div class="w-full aspect-square bg-surface-container-lowest rounded mb-6 overflow-hidden relative flex items-center justify-center p-4">
+<img alt="Motherboard" class="w-full h-full object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" data-alt="A premium high-performance motherboard displayed vertically against a deep space-like dark background. The angular heatsinks and complex circuitry are highlighted by crisp, architectural lighting. Subtle glassmorphism effects are visible on the I/O shield, reflecting faint cyan hues. The image focuses on the central socket area, conveying immense technical capability and robust build quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABhnt2hkqXjmmqiQXD4lhoNjII2LvorBU9poPXaRkGgXI5poQ_I1IpCyUuHLDqmbt-r73haOuv-NnV3Abx_NoIoARmUWXy2z8lMTdvFhlRwe4FNrWRrlA6dGvgW7igJkvISiyqPFhomSXvBEospC5g06kvwlrwO8SLyzoMsgLtwt1fwdF2T4dIrPyHhulKt5biSjwIbaKAejcoxb8-SDzqtpYdvhuMc996zI-mu6y8v-Zcaa5n_K85itaLz-OWsjMg7FlTYHy4vt1K"/>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-muted-teal uppercase tracking-widest mb-2">Motherboard</span>
+<h3 class="font-headline-md text-[20px] text-white leading-tight">ROG Maximus Z790 Extreme</h3>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="group flex flex-col items-center bg-surface-dark rounded-lg p-6 border border-surface-variant hover:border-electric-cyan/50 hover:shadow-[0_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 cursor-pointer">
+<div class="w-full aspect-square bg-surface-container-lowest rounded mb-6 overflow-hidden relative flex items-center justify-center p-4">
+<img alt="RAM" class="w-full h-full object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" data-alt="Two sticks of high-end DDR5 RAM floating in a void of dark navy. Their textured aluminum heat spreaders have a matte finish, accented by a perfectly diffused, solid cyan light bar running along the top edge. The lighting is moody but precise, throwing soft gradients across the metal surfaces to highlight their industrial design. The layout is perfectly centered." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1HkA-WS17xFDP0zjTq9P_rFerbSXqnqbj_w5VQnzMWgPfakLGxCFIEQYDjULEU0dOzpSKDH1-HVQ2ZMMYylvLnBbLGCUb4daTf3rNBsx46FNbuFhA3geN08SZgBfJRKxspCw7nkhXa3K7nLEYZwlAk42SuUJAoRJL16cQYhA4LcIPtbSrd8d5hLYZh-eWRLrlE9BpZJSmhmOpu7GNZhnghO8HG4GzJ00Fd2XoMXzBlgLqS0WZSo0HVywfY1Wsq_8EngqJ_PQD8bk4"/>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-muted-teal uppercase tracking-widest mb-2">Memory</span>
+<h3 class="font-headline-md text-[20px] text-white leading-tight">Dominator Platinum RGB 64GB DDR5</h3>
+</div>
+</article>
+<!-- Product Card 5 -->
+<article class="group flex flex-col items-center bg-surface-dark rounded-lg p-6 border border-surface-variant hover:border-electric-cyan/50 hover:shadow-[0_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 cursor-pointer">
+<div class="w-full aspect-square bg-surface-container-lowest rounded mb-6 overflow-hidden relative flex items-center justify-center p-4">
+<img alt="SSD" class="w-full h-full object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, minimalist NVMe solid-state drive angled slightly on a reflective black glass surface. The label is stripped away to reveal the raw NAND flash chips, which are illuminated by a harsh, precise rim light in electric cyan. The surrounding background fades entirely into a deep, pitch navy blue, making the storage drive look like a piece of futuristic monolithic hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa9SsvAApVI1uxe_NNief6oMO___IG3Q2X0hpCJA2NQTpFT3pb8KUKN7C7ICYuFrEc9uDJeN0nuL9AW1qSCSHonWdE-uboEdul_XXOCvP2FpaS4CyMvS8Bvz9q1J3CjNbDH2QvDcBbZs_N3V00NrcoK6TwpicAxe2iHySBphQN8rjT-oWDWE_zC37hHZdDPzADVEUbCH7R3e7VqmXK1Jbt3gyllrXdq1Qgu-U-kFzBXkpsgtgTh0NhsOsEhKYJCzBDDJZxbUgTx5dz"/>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-muted-teal uppercase tracking-widest mb-2">Storage</span>
+<h3 class="font-headline-md text-[20px] text-white leading-tight">990 PRO PCIe 4.0 NVMe SSD 2TB</h3>
+</div>
+</article>
+<!-- Product Card 6 -->
+<article class="group flex flex-col items-center bg-surface-dark rounded-lg p-6 border border-surface-variant hover:border-electric-cyan/50 hover:shadow-[0_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 cursor-pointer">
+<div class="w-full aspect-square bg-surface-container-lowest rounded mb-6 overflow-hidden relative flex items-center justify-center p-4">
+<img alt="PSU" class="w-full h-full object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" data-alt="A massive, industrial-looking computer power supply unit sitting squarely in the center of a dark studio setup. The matte black casing absorbs most light, while the internal fan grille glows with a faint, technical cyan hue. Thick, braided cables trail off into the deep navy shadows. The image projects an aura of immense, reliable, and clean power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl6gxjdZ6257H7vCXkpHpyQht9puVoBFxkm1HvrUNVddilJTWIQBX9qBdarPLROwBFrbVBh0pcA70lj_wAemUNvx_pItDDqe7-J9d6Q7xMn50V99LePC9A1ZRxrl0ufZFvN0HeT7wcq9VpeuGT6CL4PoyY-Vt50p_c7bZrJyRxIkS_3vcpt57xs0ADuEgv2AzK6gKh3tr9piBUTlO6BKTzAjClnexGkkyPSgVnNAxqh1VmZ3JXaXDuTUxZgUge5Fb2-JSS-v3ChzB5"/>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-muted-teal uppercase tracking-widest mb-2">Power Supply</span>
+<h3 class="font-headline-md text-[20px] text-white leading-tight">Dark Power Pro 13 1600W ATX 3.0</h3>
+</div>
+</article>
+</div>
+</div>
+</main>
+</body></html>

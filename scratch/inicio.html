@@ -1,0 +1,304 @@
+<!DOCTYPE html><html class="dark" lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>PV Brasil Importação - Distribuidora e Atacadista de Eletrônicos</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Montserrat:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#323537",
+                    "secondary": "#afecff",
+                    "on-tertiary-container": "#008fa1",
+                    "tertiary-fixed-dim": "#44d8f1",
+                    "inverse-surface": "#e0e3e5",
+                    "secondary-container": "#14d8ff",
+                    "on-tertiary": "#00363e",
+                    "slate-gray": "#525656",
+                    "on-secondary-fixed": "#001f27",
+                    "on-tertiary-fixed": "#001f25",
+                    "on-primary-container": "#74829d",
+                    "surface-variant": "#323537",
+                    "inverse-on-surface": "#2d3133",
+                    "electric-cyan": "#00D8FF",
+                    "surface-container": "#1d2022",
+                    "on-primary-fixed-variant": "#39475f",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "secondary-fixed-dim": "#14d8ff",
+                    "on-background": "#e0e3e5",
+                    "on-primary-fixed": "#0d1c32",
+                    "on-tertiary-fixed-variant": "#004e59",
+                    "tertiary-container": "#001c21",
+                    "surface": "#101415",
+                    "on-secondary-fixed-variant": "#004e5d",
+                    "surface-tint": "#b9c7e4",
+                    "surface-container-high": "#272a2c",
+                    "surface-bright": "#363a3b",
+                    "on-surface-variant": "#c5c6cd",
+                    "primary": "#b9c7e4",
+                    "primary-fixed": "#d6e3ff",
+                    "on-secondary": "#003641",
+                    "tertiary": "#44d8f1",
+                    "surface-dim": "#101415",
+                    "outline": "#8f9097",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#a1efff",
+                    "muted-teal": "#00BCD4",
+                    "on-primary": "#233148",
+                    "surface-container-low": "#191c1e",
+                    "on-secondary-container": "#005b6c",
+                    "inverse-primary": "#515f78",
+                    "secondary-fixed": "#afecff",
+                    "background": "#101415",
+                    "primary-container": "#0a192f",
+                    "deep-navy": "#0A192F",
+                    "error": "#ffb4ab",
+                    "surface-dark": "#112240",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-lowest": "#0b0f10",
+                    "outline-variant": "#44474d",
+                    "on-error": "#690005",
+                    "on-surface": "#e0e3e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base-unit": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Montserrat"
+                    ],
+                    "button": [
+                            "Montserrat"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "headline-xl": [
+                            "Montserrat"
+                    ],
+                    "headline-lg-mobile": [
+                            "Montserrat"
+                    ],
+                    "headline-lg": [
+                            "Montserrat"
+                    ],
+                    "label-sm": [
+                            "JetBrains Mono"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "button": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-xl": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0A192F; /* deep-navy floor */
+        }
+    </style>
+<style data-stitch-cursor="">*{cursor:crosshair!important}[contenteditable="true"]:focus,.cursor-text:focus{cursor:text!important}</style><style data-stitch-scroll-lock="">html,body{overflow:hidden!important}</style></head>
+<body class="text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface/80 backdrop-blur-md border-t border-electric-cyan/20 shadow-[0px_4px_20px_rgba(0,216,255,0.1)] docked full-width sticky">
+<!-- Brand -->
+<div class="flex-shrink-0 flex items-center">
+<img alt="PV Brasil Importação Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzJiYJsLP4_PYG7bi0ZUMNicT-4f5aCpbN1y3Z1sC7fRGDKGtyrXUK780szGZrvxHTwhLF-YGn3PLquZrLeUo16vThTQ4jxtreSMkCPP_XX5cQhwm0rXI8TGQbZJpeQ0z2-fBr8woVkaYUMnOUAkmwayGSGXyzm94OKPuNVpb9G0I7ySaiirUDHQ8lBsKpzMi78gDQP3AzfAnt3r_wz8wXP-Dn6Ze35JaydV9dosEndWtt2y3WEG8YlUhYOLKgjofHlwI5NO_Qx6bG">
+</div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-8 flex-1 justify-center">
+<a class="font-button text-button text-electric-cyan border-b-2 border-electric-cyan pb-1 hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">Início</a>
+<a class="font-button text-button text-on-surface-variant hover:text-electric-cyan transition-colors hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">Produtos</a>
+<a class="font-button text-button text-on-surface-variant hover:text-electric-cyan transition-colors hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">Quem Somos</a>
+<a class="font-button text-button text-on-surface-variant hover:text-electric-cyan transition-colors hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">Localização</a>
+<a class="font-button text-button text-on-surface-variant hover:text-electric-cyan transition-colors hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform" href="#">Contato</a>
+</div>
+<!-- Trailing Actions & Search -->
+<div class="flex items-center gap-4 flex-shrink-0">
+<!-- Search Icon (Search on right) -->
+<button class="text-electric-cyan hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-electric-cyan hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="text-electric-cyan hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-electric-cyan hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-deep-navy border-b border-[#233554]">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-deep-navy via-deep-navy/90 to-transparent z-10"></div>
+<img class="w-full h-full object-cover object-right opacity-60 mix-blend-luminosity" data-alt="A striking digital composition featuring a sleek, high-end smartphone and tablet floating elegantly against a deep, dark abyss. The metallic edges of the devices catch an intense, neon electric-cyan rim light, highlighting their precision engineering. The background is a vast, minimal dark navy space that evokes a sense of advanced technology and premium exclusivity. Subtle glassmorphism reflections bounce off the glossy screens, reinforcing the modern, professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZdeILLcJpyS7AYypmY5WRYy4yhnZZH2j2hz8-OL2zC73d9275a1g9NWWyDybxrdCmzBrs9emTlmsiEqz7j6gmqQCiG-_cZ8E-9RoZW2dUC2pDXHu_t9P1XTpegrv1sCsrcFx67LTOgPl1G1vSFwao3H74iinqhD3lVxaWhf2CFOCQ9_TwrGRd0IcZvuaObSfa8XEyOMYxa81E9OeqH9r3rdc_6sbAUdSczAODvJxZ5mfbySaGnGkbHfEvx9SCDP_tpXH1okpm0quY">
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-40 flex flex-col justify-center min-h-[716px]">
+<div class="max-w-2xl">
+<span class="inline-block px-3 py-1 bg-electric-cyan/10 border border-electric-cyan/30 text-electric-cyan font-label-sm text-label-sm rounded-DEFAULT mb-6 backdrop-blur-md uppercase tracking-widest">
+                        Distribuidora Autorizada
+                    </span>
+<h1 class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-surface mb-6">
+                        Distribuidora e Atacadista <br>de Eletrônicos.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        Especializada em hardware (PC Gamer), telefonia e utilidades. Somos distribuidores autorizados das marcas PIX, X-Cell, Toshiba, Maketech e Bright.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-electric-cyan text-deep-navy font-button text-button px-8 py-4 rounded-DEFAULT hover:shadow-[0px_4px_20px_rgba(0,216,255,0.3)] transition-all duration-300 text-center uppercase">
+                            Explorar Catálogo
+                        </button>
+<button class="bg-transparent border-[1.5px] border-electric-cyan text-electric-cyan font-button text-button px-8 py-4 rounded-DEFAULT hover:bg-electric-cyan/10 transition-all duration-300 text-center uppercase">
+                            Falar com Consultor
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 border-b border-[#233554]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Trust 1 -->
+<div class="flex items-center gap-4 bg-surface-dark/50 p-6 rounded-lg border border-[#233554] backdrop-blur-sm">
+<div class="w-12 h-12 rounded-full bg-electric-cyan/10 flex items-center justify-center text-electric-cyan border border-electric-cyan/20">
+<span class="material-symbols-outlined text-2xl" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px] leading-snug font-semibold text-on-surface">Envio Especializado</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Frota própria com entrega de baixo custo ou gratuita em Salvador e Região Metropolitana, além de envio nacional.</p>
+</div>
+</div>
+<!-- Trust 2 -->
+<div class="flex items-center gap-4 bg-surface-dark/50 p-6 rounded-lg border border-[#233554] backdrop-blur-sm">
+<div class="w-12 h-12 rounded-full bg-electric-cyan/10 flex items-center justify-center text-electric-cyan border border-electric-cyan/20">
+<span class="material-symbols-outlined text-2xl" data-icon="verified">verified</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px] leading-snug font-semibold text-on-surface">Marcas Oficiais</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Distribuidora autorizada PIX, X-Cell, Toshiba, Maketech e Bright.</p>
+</div>
+</div>
+<!-- Trust 3 -->
+<div class="flex items-center gap-4 bg-surface-dark/50 p-6 rounded-lg border border-[#233554] backdrop-blur-sm">
+<div class="w-12 h-12 rounded-full bg-electric-cyan/10 flex items-center justify-center text-electric-cyan border border-electric-cyan/20">
+<span class="material-symbols-outlined text-2xl" data-icon="shield">shield</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px] leading-snug font-semibold text-on-surface">Compra Segura</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Transações criptografadas ponta a ponta para revendedores.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products (Bento Grid) -->
+
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-lowest border-t border-outline-variant flat no shadows">
+<div class="flex flex-col gap-4">
+<div class="opacity-80 hover:opacity-100 transition-opacity">
+<img alt="PV Brasil Importação Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzJiYJsLP4_PYG7bi0ZUMNicT-4f5aCpbN1y3Z1sC7fRGDKGtyrXUK780szGZrvxHTwhLF-YGn3PLquZrLeUo16vThTQ4jxtreSMkCPP_XX5cQhwm0rXI8TGQbZJpeQ0z2-fBr8woVkaYUMnOUAkmwayGSGXyzm94OKPuNVpb9G0I7ySaiirUDHQ8lBsKpzMi78gDQP3AzfAnt3r_wz8wXP-Dn6Ze35JaydV9dosEndWtt2y3WEG8YlUhYOLKgjofHlwI5NO_Qx6bG">
+</div>
+<p class="font-label-sm text-label-sm text-slate-gray max-w-sm">
+                © 2024 PV Brasil Importação. Distribuidora e atacadista de eletrônicos. Todos os direitos reservados.
+            </p>
+</div>
+<div class="flex flex-col md:flex-row gap-6 md:gap-12">
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-white hover:text-electric-cyan transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Política de Privacidade</a>
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-white hover:text-electric-cyan transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Termos de Serviço</a>
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-white hover:text-electric-cyan transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Informações de Envio</a>
+<a class="font-label-sm text-label-sm text-slate-gray hover:text-white hover:text-electric-cyan transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Devoluções</a>
+</div>
+</footer>
+
+
+</body></html>
