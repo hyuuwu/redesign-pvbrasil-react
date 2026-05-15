@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+    <main className="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full animate-fade-in-up">
       {/* Hero Section */}
       <section className="mb-24 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
         <div className="md:col-span-5 flex flex-col gap-6 z-10">

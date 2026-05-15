@@ -93,6 +93,21 @@ export default {
         "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
         "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
         "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+      },
+      "keyframes": {
+        "fade-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
+        }
+      },
+      "animation": {
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards"
       }
     },
   },

@@ -1,6 +1,6 @@
 export default function Location() {
   return (
-    <main className="flex-grow pt-[120px] pb-24 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+    <main className="flex-grow pt-[120px] pb-24 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto animate-fade-in-up">
       <header className="mb-16">
         <h1 className="font-headline-xl text-headline-xl text-on-surface mb-6">Nossa Localização</h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
@@ -53,7 +53,7 @@ export default function Location() {
               </li>
               <li className="flex justify-between items-center border-b border-outline-variant/30 pb-2">
                 <span className="font-body-md text-body-md text-on-surface-variant">Sábado</span>
-                <span className="font-body-md text-body-md text-on-surface font-medium">10:00 - 15:00</span>
+                <span className="font-body-md text-body-md text-on-surface font-medium">08:00 - 15:00</span>
               </li>
               <li className="flex justify-between items-center">
                 <span className="font-body-md text-body-md text-on-surface-variant">Domingo</span>

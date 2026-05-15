@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="flex-grow pt-20">
+    <main className="flex-grow pt-20 animate-fade-in-up">
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden bg-deep-navy border-b border-[#233554]">
         <div className="absolute inset-0 z-0">
