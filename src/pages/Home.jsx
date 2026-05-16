@@ -23,8 +23,11 @@ export default function Home() {
               Especializada em hardware (PC Gamer), telefonia e utilidades. Somos distribuidores autorizados das marcas PIX, X-Cell, Toshiba, Maketech e Bright.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button onClick={() => window.open('https://wa.me/5571981921193', '_blank')} className="bg-electric-cyan text-deep-navy font-button text-button px-8 py-4 rounded-DEFAULT hover:shadow-[0px_4px_20px_rgba(0,216,255,0.3)] transition-all duration-300 text-center uppercase cursor-pointer">
-                Falar com Consultor
+              <button onClick={() => window.open('https://wa.me/5571999285059', '_blank')} className="bg-electric-cyan text-deep-navy font-button text-button px-8 py-4 rounded-DEFAULT hover:shadow-[0px_4px_20px_rgba(0,216,255,0.3)] transition-all duration-300 text-center uppercase cursor-pointer">
+                Fale com um consultor
+              </button>
+              <button onClick={() => window.open('https://wa.me/5571981921193', '_blank')} className="bg-transparent border-[1.5px] border-electric-cyan text-electric-cyan font-button text-button px-8 py-4 rounded-DEFAULT hover:bg-electric-cyan/10 transition-all duration-300 text-center uppercase cursor-pointer">
+                Setor de Atacado
               </button>
             </div>
           </div>

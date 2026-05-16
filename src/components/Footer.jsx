@@ -14,7 +14,7 @@ export default function Footer() {
           </Link>
         </div>
         <p className="font-label-sm text-label-sm text-slate-gray max-w-sm">
-          © 2026 PV Brasil Importação. Distribuidora e atacadista de eletrônicos. Todos os direitos reservados.
+          © 2026 PV Brasil Importação. Distribuidora & Varejista de Eletrônicos.
         </p>
       </div>
     </footer>

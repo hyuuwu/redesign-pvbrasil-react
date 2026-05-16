@@ -48,6 +48,9 @@ export default function Navbar() {
           <Link className={getLinkClasses("/localizacao")} to="/localizacao">
             Localização
           </Link>
+          <Link className={getLinkClasses("/parceiros")} to="/parceiros">
+            Parceiros
+          </Link>
         </div>
 
         {/* Trailing Actions & Search */}
@@ -96,6 +99,9 @@ export default function Navbar() {
           </Link>
           <Link className={getLinkClasses("/localizacao", true)} to="/localizacao" onClick={closeMobileMenu}>
             Localização
+          </Link>
+          <Link className={getLinkClasses("/parceiros", true)} to="/parceiros" onClick={closeMobileMenu}>
+            Parceiros
           </Link>
         </div>
       </div>
