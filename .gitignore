@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 # shh, ai
 .scratch
+scratch/
 node_modules
 dist
 dist-ssr
