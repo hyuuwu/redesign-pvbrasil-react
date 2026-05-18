@@ -9,7 +9,7 @@ export default function About() {
             Distribuição e Atacado de <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-cyan to-muted-teal">Excelência</span>
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant">
-            Fundada em Feira de Santana, Bahia, no ano de 2022, a PV Brasil destaca-se como distribuidora e atacadista de tecnologia. Somos especialistas em importação de eletrônicos e atuamos como distribuidores autorizados das principais marcas mundiais.
+            Fundada em Feira de Santana, Bahia, no ano de 2022, a PV Brasil destaca-se como distribuidora e atacadista de tecnologia. Somos especialistas em importação de eletrônicos e atuamos como distribuidores autorizados das principais marcas Nacionais.
           </p>
         </div>
         <div className="md:col-span-7 relative">
