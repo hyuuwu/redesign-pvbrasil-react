@@ -51,6 +51,9 @@ export default function Navbar() {
           <Link className={getLinkClasses("/parceiros")} to="/parceiros">
             Parceiros
           </Link>
+          <Link className={getLinkClasses("/atacado")} to="/atacado">
+            Atacado
+          </Link>
         </div>
 
         {/* Trailing Actions & Search */}
@@ -87,7 +90,7 @@ export default function Navbar() {
       {/* Mobile Navigation Menu */}
       <div 
         className={`md:hidden absolute top-20 left-0 w-full bg-surface-dark border-b border-electric-cyan/20 shadow-lg overflow-hidden transition-all duration-300 ease-in-out z-40 ${
-          isMobileMenuOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
+          isMobileMenuOpen ? 'max-h-[420px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="flex flex-col py-2">
@@ -102,6 +105,9 @@ export default function Navbar() {
           </Link>
           <Link className={getLinkClasses("/parceiros", true)} to="/parceiros" onClick={closeMobileMenu}>
             Parceiros
+          </Link>
+          <Link className={getLinkClasses("/atacado", true)} to="/atacado" onClick={closeMobileMenu}>
+            Atacado
           </Link>
         </div>
       </div>

@@ -24,15 +24,22 @@ export default function Partners() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {partners.map((partner) => (
             <div key={partner.id} className="bg-surface-dark border border-outline-variant hover:border-electric-cyan/50 hover:shadow-[0px_4px_20px_rgba(0,216,255,0.15)] transition-all duration-300 rounded-xl p-8 flex flex-col items-center justify-center text-center group cursor-pointer aspect-square">
-              {/* Container da Imagem */}
-              <div className="w-full h-full mb-4 flex items-center justify-center">
-                <img
-                  // Se houver uma imagem (partner.image), ele usa. Se não tiver, usa o quadrado transparente (placeholder).
-                  src={partner.image || "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='transparent'/%3E%3C/svg%3E"}
-                  alt={`Logo ${partner.name}`}
-                  // Se for o placeholder transparente, deixamos a opacidade baixa, se não, usamos a imagem com opacidade 100% arredondada.
-                  className={`w-full h-full object-contain transition-all duration-300 rounded-md ${partner.image ? 'opacity-100' : 'opacity-50 group-hover:opacity-100'} ${partner.scale || ''}`}
-                />
+              <div className="partner-logo-scene w-full h-full mb-4">
+                <div className={`w-full h-full ${partner.scale || ''}`}>
+                  <div className="partner-logo-rotation">
+                    <img
+                      src={partner.image}
+                      alt={`Logo ${partner.name}`}
+                      className="partner-logo-face w-full h-full object-contain rounded-md"
+                    />
+                    <img
+                      src={partner.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="partner-logo-face partner-logo-back w-full h-full object-contain rounded-md"
+                    />
+                  </div>
+                </div>
               </div>
               <h3 className="font-label-sm text-electric-cyan uppercase tracking-widest">{partner.name}</h3>
             </div>
