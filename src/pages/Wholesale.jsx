@@ -40,7 +40,7 @@ export default function Wholesale() {
     { question: "Vocês enviam para todo o Brasil?", answer: "Sim. Realizamos entregas em todo o Brasil. As opções de transporte, os prazos e os custos são calculados conforme o destino e o volume do pedido." },
   ];
 
-  const wholesaleWhatsapp = "https://wa.me/5571981921193?text=Olá%2C%20quero%20conhecer%20as%20condições%20para%20compras%20no%20atacado.";
+  const wholesaleWhatsapp = "https://wa.me/5571999285059?text=Olá%2C%20quero%20conhecer%20as%20condições%20para%20compras%20no%20atacado.";
 
   return (
     <main className="flex-grow pt-20 animate-fade-in-up">
@@ -92,7 +92,7 @@ export default function Wholesale() {
                 <p className="mt-3 font-body-md text-body-md text-on-surface-variant">{step.text}</p>
                 <div className="mt-auto pt-6">
                   <a
-                    href={`https://wa.me/5571981921193?text=${encodeURIComponent(step.message)}`}
+                    href={`https://wa.me/5571999285059?text=${encodeURIComponent(step.message)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${step.button} pelo WhatsApp`}
