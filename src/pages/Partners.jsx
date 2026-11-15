@@ -1,4 +1,6 @@
+import usePageTitle from "../hooks/usePageTitle";
 export default function Partners() {
+  usePageTitle("Parceiros");
   const partners = [
     { id: "get", name: "GET", image: "/images/get.png" },
     { id: "fiolux", name: "Fiolux", image: "/images/fiolux.png" },

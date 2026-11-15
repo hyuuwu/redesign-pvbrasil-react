@@ -1,6 +1,8 @@
+import usePageTitle from "../hooks/usePageTitle";
 import { Link } from "react-router-dom";
 
 export default function NotFound() {
+  usePageTitle("Página não encontrada");
   return (
     <main className="flex flex-grow items-center justify-center px-margin-mobile pb-20 pt-32 md:px-margin-desktop">
       <section className="relative w-full max-w-3xl overflow-hidden rounded-xl border border-outline-variant bg-surface-dark px-6 py-16 text-center shadow-[0_4px_30px_rgba(0,0,0,0.35)] md:px-12 md:py-20">
