@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { NAV_LINKS } from "./navLinks";
+import { CONTACT, whatsappLink } from "../data/contact";
 
 export default function Navbar() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const getLinkClasses = (path, isMobile = false) => {
-    const baseClasses = "font-button text-button transition-colors hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform";
+    const baseClasses = "whitespace-nowrap font-button text-button transition-colors hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90 transition-transform";
     
     if (isMobile) {
       if (location.pathname === path) {
@@ -38,28 +40,18 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8 flex-1 justify-center">
-          <Link className={getLinkClasses("/")} to="/">
-            Início
-          </Link>
-          <Link className={getLinkClasses("/quem-somos")} to="/quem-somos">
-            Quem Somos
-          </Link>
-          <Link className={getLinkClasses("/localizacao")} to="/localizacao">
-            Localização
-          </Link>
-          <Link className={getLinkClasses("/parceiros")} to="/parceiros">
-            Parceiros
-          </Link>
-          <Link className={getLinkClasses("/atacado")} to="/atacado">
-            Atacado
-          </Link>
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-center">
+          {NAV_LINKS.map((link) => (
+            <Link key={link.path} className={getLinkClasses(link.path)} to={link.path}>
+              {link.label}
+            </Link>
+          ))}
         </div>
 
         {/* Trailing Actions & Search */}
         <div className="flex items-center gap-4 flex-shrink-0">
           <a
-            href="mailto:vendas@pvbrasilimportacao.com.br"
+            href={`mailto:${CONTACT.email}`}
             className="bg-electric-cyan/10 text-electric-cyan border border-electric-cyan/30 font-button text-button px-4 py-2.5 rounded-DEFAULT hover:bg-electric-cyan hover:text-deep-navy hover:shadow-[0px_4px_20px_rgba(0,216,255,0.3)] transition-all duration-300 flex items-center gap-2"
             title="Enviar E-mail"
           >
@@ -67,7 +59,7 @@ export default function Navbar() {
             <span className="hidden lg:inline">E-mail</span>
           </a>
           <a
-            href="https://wa.me/5571986629647"
+            href={whatsappLink(CONTACT.whatsappRetail)}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 font-button text-button px-4 py-2.5 rounded-DEFAULT hover:bg-[#25D366] hover:text-white hover:shadow-[0px_4px_20px_rgba(37,211,102,0.3)] transition-all duration-300 flex items-center gap-2"
@@ -76,9 +68,13 @@ export default function Navbar() {
             <span className="hidden md:inline">WhatsApp</span>
           </a>
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
+            type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-electric-cyan hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform"
+            aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            className="lg:hidden text-electric-cyan hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform"
           >
             <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>
               {isMobileMenuOpen ? 'close' : 'menu'}
@@ -88,27 +84,18 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div 
-        className={`md:hidden absolute top-20 left-0 w-full bg-surface-dark border-b border-electric-cyan/20 shadow-lg overflow-hidden transition-all duration-300 ease-in-out z-40 ${
-          isMobileMenuOpen ? 'max-h-[420px] opacity-100' : 'max-h-0 opacity-0'
+      <div
+        id="mobile-menu"
+        className={`lg:hidden absolute top-20 left-0 w-full bg-surface-dark border-b border-electric-cyan/20 shadow-lg overflow-hidden transition-all duration-300 ease-in-out z-40 ${
+          isMobileMenuOpen ? 'max-h-[480px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="flex flex-col py-2">
-          <Link className={getLinkClasses("/", true)} to="/" onClick={closeMobileMenu}>
-            Início
-          </Link>
-          <Link className={getLinkClasses("/quem-somos", true)} to="/quem-somos" onClick={closeMobileMenu}>
-            Quem Somos
-          </Link>
-          <Link className={getLinkClasses("/localizacao", true)} to="/localizacao" onClick={closeMobileMenu}>
-            Localização
-          </Link>
-          <Link className={getLinkClasses("/parceiros", true)} to="/parceiros" onClick={closeMobileMenu}>
-            Parceiros
-          </Link>
-          <Link className={getLinkClasses("/atacado", true)} to="/atacado" onClick={closeMobileMenu}>
-            Atacado
-          </Link>
+          {NAV_LINKS.map((link) => (
+            <Link key={link.path} className={getLinkClasses(link.path, true)} to={link.path} onClick={closeMobileMenu}>
+              {link.label}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>

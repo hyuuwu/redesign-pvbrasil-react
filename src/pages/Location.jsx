@@ -1,10 +1,13 @@
+import usePageTitle from "../hooks/usePageTitle";
+import { CONTACT } from "../data/contact";
 export default function Location() {
+  usePageTitle("Localização");
   return (
     <main className="flex-grow pt-[120px] pb-24 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto animate-fade-in-up">
       <header className="mb-16">
         <h1 className="font-headline-xl text-headline-xl text-on-surface mb-6">Nossa Localização</h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-          Visite nossas unidades na Bahia. Espaços meticulosamente projetados para demonstrar a excelência do hardware em um ambiente imersivo, combinando consultoria técnica especializada com uma experiência tátil incomparável.
+          Visite nossa loja em Salvador. Espaços meticulosamente projetados para demonstrar a excelência do hardware em um ambiente imersivo, combinando consultoria técnica especializada com uma experiência tátil incomparável.
         </p>
       </header>
 
@@ -30,12 +33,12 @@ export default function Location() {
             <span className="font-label-sm text-label-sm text-electric-cyan mb-4 block">NOSSAS UNIDADES</span>
             <div className="flex flex-col gap-4 mb-8">
               <address className="not-italic font-body-md text-body-md text-on-surface-variant">
-                <strong className="text-on-surface block mb-1">Loja Barris</strong>
-                Rua do Salete, 64<br />
-                Barris, Salvador - BA
+                <strong className="text-on-surface block mb-1">{CONTACT.address.name}</strong>
+                {CONTACT.address.street}<br />
+                {CONTACT.address.district}
               </address>
             </div>
-            <a href="https://www.google.com/maps/place/PV+Brasil+Importa%C3%A7%C3%A3o+-%20Salvador/data=!3m1!4b1!4m6!3m5!1s0x71605898aeaf5a3:0x433b3a7344811cab!8m2!3d-12.9850633!4d-38.5160685!16s%2Fg%2F11n5r51s4w?entry=ttu" target="_blank" rel="noopener noreferrer" className="w-full bg-transparent border-[1.5px] border-electric-cyan text-electric-cyan font-button text-button py-3 px-6 rounded hover:bg-electric-cyan/10 transition-colors flex items-center justify-center gap-2">
+            <a href={CONTACT.mapsUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-transparent border-[1.5px] border-electric-cyan text-electric-cyan font-button text-button py-3 px-6 rounded hover:bg-electric-cyan/10 transition-colors flex items-center justify-center gap-2">
               <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>directions</span>
               Obter Direções
             </a>
@@ -47,18 +50,16 @@ export default function Location() {
             </div>
             <span className="font-label-sm text-label-sm text-electric-cyan mb-4 block">HORÁRIO DE FUNCIONAMENTO</span>
             <ul className="flex flex-col gap-4 w-full">
-              <li className="flex justify-between items-center border-b border-outline-variant/30 pb-2">
-                <span className="font-body-md text-body-md text-on-surface-variant">Segunda - Sexta</span>
-                <span className="font-body-md text-body-md text-on-surface font-medium">08:00 - 18:00</span>
-              </li>
-              <li className="flex justify-between items-center border-b border-outline-variant/30 pb-2">
-                <span className="font-body-md text-body-md text-on-surface-variant">Sábado</span>
-                <span className="font-body-md text-body-md text-on-surface font-medium">08:00 - 15:00</span>
-              </li>
-              <li className="flex justify-between items-center">
-                <span className="font-body-md text-body-md text-on-surface-variant">Domingo</span>
-                <span className="font-label-sm text-label-sm text-electric-cyan/70 bg-electric-cyan/10 px-2 py-1 rounded">Fechado</span>
-              </li>
+              {CONTACT.hours.map((slot) => (
+                <li key={slot.days} className="flex justify-between items-center border-b border-outline-variant/30 pb-2 last:border-0 last:pb-0">
+                  <span className="font-body-md text-body-md text-on-surface-variant">{slot.days}</span>
+                  {slot.time ? (
+                    <span className="font-body-md text-body-md text-on-surface font-medium">{slot.time}</span>
+                  ) : (
+                    <span className="font-label-sm text-label-sm text-electric-cyan/70 bg-electric-cyan/10 px-2 py-1 rounded">Fechado</span>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

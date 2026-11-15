@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import usePageTitle from "../hooks/usePageTitle";
+import { CONTACT, whatsappLink } from "../data/contact";
 
 const featuredPartners = [
   { name: "GET", image: "/images/get.png" },
@@ -23,9 +25,10 @@ const googleReviews = [
   },
 ];
 
-const googleMapsUrl = "https://www.google.com/maps/place/PV+Brasil+Importa%C3%A7%C3%A3o+-+Salvador/data=!4m6!3m5!1s0x71605898aeaf5a3:0x433b3a7344811cab!8m2!3d-12.9850633!4d-38.5160685!16s%2Fg%2F11n5r51s4w";
+const googleMapsUrl = CONTACT.mapsUrl;
 
 export default function Home() {
+  usePageTitle();
   const videoRef = useRef(null);
   const [videoRevealed, setVideoRevealed] = useState(false);
   const [videoMuted, setVideoMuted] = useState(true);
@@ -112,16 +115,16 @@ export default function Home() {
               Distribuidora Autorizada
             </span>
             <h1 className="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-surface mb-6">
-              Distribuidora e Varejista <br />de Eletronicos.
+              Distribuidora e Varejista <br />de Eletrônicos.
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
               Tecnologia, telefonia, informática e utilidades para lojistas e consumidores, com marcas selecionadas, atendimento especializado e distribuição em toda a Bahia.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button onClick={() => window.open('https://wa.me/5571986629647', '_blank')} className="bg-electric-cyan text-deep-navy font-button text-button px-8 py-4 rounded-DEFAULT hover:shadow-[0px_4px_20px_rgba(0,216,255,0.3)] transition-all duration-300 text-center uppercase cursor-pointer">
+              <button onClick={() => window.open(whatsappLink(CONTACT.whatsappRetail), '_blank', 'noopener')} className="bg-electric-cyan text-deep-navy font-button text-button px-8 py-4 rounded-DEFAULT hover:shadow-[0px_4px_20px_rgba(0,216,255,0.3)] transition-all duration-300 text-center uppercase cursor-pointer">
                 Fale com um consultor
               </button>
-              <button onClick={() => window.open('https://wa.me/5571999285059', '_blank')} className="bg-transparent border-[1.5px] border-electric-cyan text-electric-cyan font-button text-button px-8 py-4 rounded-DEFAULT hover:bg-electric-cyan/10 transition-all duration-300 text-center uppercase cursor-pointer">
+              <button onClick={() => window.open(whatsappLink(CONTACT.whatsappWholesale), '_blank', 'noopener')} className="bg-transparent border-[1.5px] border-electric-cyan text-electric-cyan font-button text-button px-8 py-4 rounded-DEFAULT hover:bg-electric-cyan/10 transition-all duration-300 text-center uppercase cursor-pointer">
                 Setor de Atacado
               </button>
             </div>
@@ -152,11 +155,11 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-4 bg-surface-dark/50 p-6 rounded-lg border border-[#233554] backdrop-blur-sm">
             <div className="w-12 h-12 rounded-full bg-electric-cyan/10 flex items-center justify-center text-electric-cyan border border-electric-cyan/20">
-              <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>shield</span>
+              <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>workspace_premium</span>
             </div>
             <div>
-              <h3 className="font-headline-md text-[18px] leading-snug font-semibold text-on-surface">Compra Segura</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Transações criptografadas ponta a ponta para revendedores.</p> {/* num ta erradu isso?*/}
+              <h3 className="font-headline-md text-[18px] leading-snug font-semibold text-on-surface">Garantia de Fábrica</h3>
+              <p className="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Produtos originais com garantia conforme as condições de cada fabricante.</p>
             </div>
           </div>
         </div>
@@ -240,7 +243,7 @@ export default function Home() {
                 <div className="flex text-electric-cyan" aria-label="5 de 5 estrelas">
                   {renderStars("summary")}
                 </div>
-                <p className="mt-1 font-body-md text-sm text-on-surface-variant">29 avaliaçõeComentários públicos e reais do perfil da PV Brasil Importação em Salvadors no Google</p>
+                <p className="mt-1 font-body-md text-sm text-on-surface-variant">29 avaliações no Google</p>
               </div>
             </div>
           </div>
