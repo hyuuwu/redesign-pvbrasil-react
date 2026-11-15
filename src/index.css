@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+.home-reel {
+  position: relative;
+  width: min(100%, 420px, 42.1875svh);
+  aspect-ratio: 9 / 16;
+  opacity: 0;
+  transform: translateY(48px) scale(0.94);
+  transition: opacity 800ms ease-out, transform 800ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.home-reel-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.home-reel-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent 45%, rgba(10, 25, 47, 0.25) 65%, rgba(3, 9, 18, 0.85) 100%);
+  opacity: 0;
+  transition: opacity 900ms ease 800ms;
+}
+
+.home-reel-revealed .home-reel-gradient {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-reel,
+  .home-reel-gradient {
+    transition: none;
+    transform: none;
+  }
+}
+
 @layer base {
   body {
     background-color: #0A192F; /* deep-navy floor */

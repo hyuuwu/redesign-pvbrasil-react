@@ -26,8 +26,42 @@ const googleReviews = [
 const googleMapsUrl = "https://www.google.com/maps/place/PV+Brasil+Importa%C3%A7%C3%A3o+-+Salvador/data=!4m6!3m5!1s0x71605898aeaf5a3:0x433b3a7344811cab!8m2!3d-12.9850633!4d-38.5160685!16s%2Fg%2F11n5r51s4w";
 
 export default function Home() {
+  const videoRef = useRef(null);
+  const [videoRevealed, setVideoRevealed] = useState(false);
+  const [videoMuted, setVideoMuted] = useState(true);
   const reviewsSectionRef = useRef(null);
   const [reviewsVisible, setReviewsVisible] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+
+    let inView = false;
+    const updatePlayback = () => {
+      if (inView && !document.hidden) {
+        // Browsers may block playback; native controls remain available.
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        inView = entry.isIntersecting && entry.intersectionRatio >= 0.35;
+        if (inView) setVideoRevealed(true);
+        updatePlayback();
+      },
+      { threshold: [0, 0.35] },
+    );
+
+    observer.observe(video);
+    document.addEventListener("visibilitychange", updatePlayback);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", updatePlayback);
+      video.pause();
+    };
+  }, []);
 
   useEffect(() => {
     const section = reviewsSectionRef.current;
@@ -67,9 +101,9 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-deep-navy via-deep-navy/90 to-transparent z-10"></div>
           <img
-            className="w-full h-full object-cover object-right opacity-60 mix-blend-luminosity"
-            alt="Hero background"
-            src="/images/real-warehouse.jpg"
+            className="w-full h-full object-cover object-[center_25%] opacity-60 mix-blend-luminosity"
+            alt="Fachada da PV Brasil Importação"
+            src="/images/m.jpg"
           />
         </div>
         <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-40 flex flex-col justify-center min-h-[716px]">
@@ -128,6 +162,45 @@ export default function Home() {
         </div>
       </section>
 
+      <section aria-labelledby="home-video-title" className="mx-auto max-w-container-max px-margin-mobile pt-20 md:px-margin-desktop md:pt-24">
+        <div className="mb-8 max-w-2xl">
+          <span className="font-label-sm text-label-sm uppercase tracking-widest text-electric-cyan">Conheça a PV Brasil</span>
+          <h2 id="home-video-title" className="mt-3 font-headline-lg text-headline-lg text-on-surface">Veja de perto a nossa loja</h2>
+        </div>
+        <div className={`home-reel mx-auto overflow-hidden rounded-xl border border-outline-variant bg-black ${videoRevealed ? "home-reel-revealed" : ""}`}>
+          <video
+            ref={videoRef}
+            className="h-full w-full object-cover"
+            controls
+            muted={videoMuted}
+            onVolumeChange={(event) => setVideoMuted(event.currentTarget.muted || event.currentTarget.volume === 0)}
+            playsInline
+            preload="metadata"
+            aria-label="Vídeo de apresentação da PV Brasil"
+          >
+            <source src="/AQO0twbSUrMTubI5A3cveGf0N26JQOJiPUBLxJVIP2gAQkLV727TnXihG27O7Sf2or3ajoVrs1dbD_6SiPqGnZKYoXYO5QtVRYLLWXY.mp4" type="video/mp4" />
+            Seu navegador não suporta a reprodução deste vídeo.
+          </video>
+          <div className="home-reel-gradient" aria-hidden="true" />
+          <button
+            type="button"
+            aria-label={videoMuted ? "Ativar som do vídeo" : "Desativar som do vídeo"}
+            aria-pressed={!videoMuted}
+            onClick={() => {
+              const video = videoRef.current;
+              if (!video) return;
+              video.muted = !videoMuted;
+              if (videoMuted && video.volume === 0) video.volume = 1;
+              setVideoMuted(video.muted);
+            }}
+            className="absolute right-4 top-4 z-10 inline-flex items-center gap-2 rounded-full border border-electric-cyan/40 bg-deep-navy/90 px-4 py-3 text-sm font-semibold text-white shadow-lg backdrop-blur-md transition-colors hover:bg-deep-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric-cyan"
+          >
+            <span className="material-symbols-outlined text-xl" aria-hidden="true">{videoMuted ? "volume_off" : "volume_up"}</span>
+            {videoMuted ? "Ativar som" : "Desativar som"}
+          </button>
+        </div>
+      </section>
+
       {/* Partners Preview */}
       <section className="max-w-container-max mx-auto px-margin-mobile py-20 md:px-margin-desktop md:py-24">
         <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
@@ -159,7 +232,7 @@ export default function Home() {
             <div className="max-w-2xl">
               <span className="font-label-sm text-label-sm uppercase tracking-widest text-electric-cyan">Avaliações no Google</span>
               <h2 className="mt-3 font-headline-lg text-headline-lg text-on-surface">A experiência de quem já comprou com a gente</h2>
-              <p className="mt-4 font-body-md text-body-md text-on-surface-variant">Comentários públicos e reais do perfil da PV Brasil Importação em Salvador.</p>
+              <p className="mt-4 font-body-md text-body-md text-on-surface-variant">Avaliações de quem compra com a gente e aprova!</p>
             </div>
             <div className="flex items-center gap-4 rounded-xl border border-outline-variant bg-surface-dark px-5 py-4">
               <span className="font-headline-lg text-4xl text-on-surface">5,0</span>
@@ -167,7 +240,7 @@ export default function Home() {
                 <div className="flex text-electric-cyan" aria-label="5 de 5 estrelas">
                   {renderStars("summary")}
                 </div>
-                <p className="mt-1 font-body-md text-sm text-on-surface-variant">29 avaliações no Google</p>
+                <p className="mt-1 font-body-md text-sm text-on-surface-variant">29 avaliaçõeComentários públicos e reais do perfil da PV Brasil Importação em Salvadors no Google</p>
               </div>
             </div>
           </div>
